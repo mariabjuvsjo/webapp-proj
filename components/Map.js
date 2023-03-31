@@ -27,7 +27,6 @@ const Map = () => {
 
         if (!origin || !destination) return;
 
-        console.log('fittosupplier')
 
         mapRefe.current.fitToSuppliedMarkers(["origin", "destination"],
             {
@@ -42,7 +41,7 @@ const Map = () => {
             }, { animated: true })
 
 
-    }, [origin, destination]);
+    }, []);
 
     useEffect(() => {
 
@@ -64,7 +63,7 @@ const Map = () => {
 
                 })
 
-            console.log(URL)
+
 
         }
 

@@ -1,4 +1,4 @@
-import { SafeAreaView, StyleSheet, Image, View, TouchableOpacity, } from 'react-native'
+import { SafeAreaView, ScrollView } from 'react-native'
 import React, { useEffect, useState } from 'react';
 import { Typography, Base } from '../styles';
 import { useNavigation } from '@react-navigation/native';
@@ -13,7 +13,7 @@ import * as Location from 'expo-location'
 import { setDestination, setOrigin } from '../slices/navSlice';
 import TopNav from '../components/TopNav';
 import TopSearch from '../components/TopSearch';
-import SavedPlaces from '../components/SavedPlaces';
+import SavedPlaces from '../components/SavedPlaces.jsx';
 import FrontItems from '../components/FrontItems';
 
 
@@ -25,10 +25,12 @@ const Searcher = () => {
     return (
 
         <SafeAreaView style={Base.container}>
-            <TopNav />
-            <TopSearch />
-            <SavedPlaces />
-            <FrontItems />
+            <ScrollView >
+                <TopNav />
+                <TopSearch />
+                <SavedPlaces />
+                <FrontItems />
+            </ScrollView>
         </SafeAreaView>
 
     )

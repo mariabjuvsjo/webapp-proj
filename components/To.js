@@ -5,15 +5,20 @@ import { Typography, Base } from '../styles';
 import { useNavigation } from '@react-navigation/native';
 import { useDispatch } from 'react-redux';
 import { Ionicons } from '@expo/vector-icons';
+import { useSelector } from 'react-redux';
 
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import { GOOGLE_MAPS_APIKEY } from '@env';
 import * as Location from 'expo-location'
 import { setDestination } from '../slices/navSlice';
+import { selectPlaces } from '../slices/userSlice';
+import placeModel from '../models/placeModel';
+
 
 const To = () => {
 
     const dispatch = useDispatch();
+
 
     const navigation = useNavigation();
     return (
@@ -31,18 +36,7 @@ const To = () => {
                         <Text>No results were found</Text>
                     </View>
                 )}
-                predefinedPlaces={[
-                    {
-                        type: 'favorite',
-                        description: 'Dominos Pizza',
-                        geometry: { location: { lat: 48.8152937, lng: 2.4597668 } },
-                    },
-                    {
-                        type: 'favorite',
-                        description: 'Chicken Republic',
-                        geometry: { location: { lat: 48.8496818, lng: 2.2940881 } },
-                    },
-                ]}
+
                 onPress={(data, details = null
                 ) => {
 
@@ -52,12 +46,7 @@ const To = () => {
                             location: details.geometry.location,
                             description: data.description
                         }))
-
-
                     navigation.navigate('Maps')
-
-
-
                 }}
                 fetchDetails={true}
                 enablePoweredByContainer={false}

@@ -9,19 +9,19 @@ const listItem = [
         id: "111",
         image: require("../assets/img/sport-car.png"),
         title: "Rides",
-        screen: "Home"
+        screen: "Searcher"
     },
     {
         id: "222",
-        image: require("../assets/img/salad.png"),
-        title: "Delivery",
-        screen: "Delivery" // lägg till
+        image: require("../assets/img/bag.png"),
+        title: "Travel",
+        screen: "Flights" // lägg till
     }
 ]
 
 export default function TopNav() {
 
-    //const navigation = useNavigation();
+    const navigation = useNavigation();
 
     return (
         <View style={Base.topnav}>
@@ -31,11 +31,11 @@ export default function TopNav() {
                 keyExtractor={(item) => item.id}
                 horizontal
                 renderItem={({ item }) => (
-                    <TouchableOpacity activeOpacity={0.1} >
+                    <TouchableOpacity activeOpacity={0.1} onPress={() => navigation.navigate(item.screen)}>
                         <View style={Base.topnavItem}>
 
                             <Image
-                                style={{ height: 40, width: 40, margin: 2 }}
+                                style={{ height: 40, width: 40, margin: 2, resizeMode: "contain" }}
                                 source={item.image}
                             />
                             <Text style={{ fontSize: 25, fontWeight: 600 }}>{item.title}</Text>

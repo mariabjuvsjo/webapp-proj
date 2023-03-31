@@ -7,6 +7,9 @@ import { selectUser } from '../slices/userSlice';
 import Landing from './Landing';
 import Login from './Login';
 import Register from './Register';
+import Flights from './Flights';
+import Airplanes from './Airplanes';
+
 
 
 const StackNavigate = () => {
@@ -44,14 +47,32 @@ const StackNavigate = () => {
 
 
             ) : (
-                <Stack.Screen
-                    name="Landing"
-                    component={Landing}
-                    options={
-                        {
-                            headerShown: false
-                        }
-                    } />
+                <>
+                    <Stack.Screen
+                        name="Landing"
+                        component={Landing}
+                        options={
+                            {
+                                headerShown: false
+                            }
+                        } />
+                    <Stack.Screen
+                        name="Flights"
+                        component={Flights}
+                        options={
+                            {
+                                headerShown: false
+                            }
+                        } />
+                    <Stack.Screen
+                        name="Airplanes"
+                        component={Airplanes}
+                        options={
+                            {
+                                headerShown: false
+                            }
+                        } />
+                </>
 
             )}
 

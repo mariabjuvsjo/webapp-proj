@@ -14,9 +14,11 @@ export const header2 = {
 }
 
 export const header3 = {
-    color: '#b8b8b8',
+    color: 'black',
     fontSize: 20,
     textAlign: "center",
+    margin: 20,
+    textDecorationLine: 'underline',
 
 }
 
@@ -30,5 +32,4 @@ export const header4 = {
     color: 'black',
     fontSize: 14,
     textAlign: "center",
-
 }

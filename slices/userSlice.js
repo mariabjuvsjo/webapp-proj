@@ -12,15 +12,20 @@ export const userSlice = createSlice({
         setUser: (state, action) => {
             state.user = action.payload;
         },
+        setPlaces: (state, action) => {
+            state.places = action.payload;
+        },
 
     }
 });
 
-export const { setUser } = userSlice.actions;
+export const { setUser, setPlaces } = userSlice.actions;
 
 
 //selectors
 export const selectUser = (state) => state.user.user
+
+export const selectPlaces = (state) => state.user.places
 
 
 

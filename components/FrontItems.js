@@ -41,7 +41,7 @@ const listItem2 = [
         id: "456",
         image: require("../assets/img/group.png"),
         title: "Book Xl for big Groups",
-        underTitle: "Legroom for everyone" // lägg till
+        undertitle: "Legroom for everyone" // lägg till
     },
 
 ]
@@ -63,7 +63,7 @@ const FrontItems = () => {
                             <View style={Base.suggestionsBox}>
 
                                 <Image
-                                    style={{ height: 45, width: 45, margin: 2 }}
+                                    style={{ height: 45, width: 45, margin: 2, resizeMode: 'contain' }}
                                     source={item.image}
                                 />
 
@@ -91,12 +91,14 @@ const FrontItems = () => {
                     keyExtractor={(item) => item.id}
                     horizontal
                     renderItem={({ item }) => (
-                        <View>
-                            <Image
-                                style={{ height: 165, width: 255, margin: 2 }}
-                                source={item.image} />
-                            <Text>{item.title}</Text>
-                            <Text>{item.undertitle}</Text>
+                        <View style={{ marginBottom: 10 }}>
+                            <TouchableOpacity style={styles.bigImageWrapp}>
+                                <Image
+                                    style={styles.bigImage}
+                                    source={item.image} />
+                            </TouchableOpacity>
+                            <Text style={{ fontWeight: 500, margin: 10 }}>{item.title}</Text>
+                            <Text style={{ fontWeight: 300, marginLeft: 10 }}>{item.undertitle}</Text>
 
 
                         </View>
@@ -131,6 +133,27 @@ const styles = StyleSheet.create({
         fontSize: 23,
         fontWeight: 500,
         margin: 10
+    },
+
+    bigImageWrapp: {
+        height: 165,
+        width: 255,
+        borderRadius: 10,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 0 },
+        shadowOpacity: 0.5,
+        shadowRadius: 2,
+        elevation: 2,
+        margin: 10
+
+    },
+
+    bigImage: {
+        height: 165,
+        width: 255,
+        resizeMode: 'contain',
+        borderRadius: 10,
+
     }
 
 

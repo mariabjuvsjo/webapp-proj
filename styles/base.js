@@ -86,6 +86,20 @@ export const btnBack2 = {
     shadowRadius: 3,
 }
 
+export const btnBackAirport = {
+    position: 'absolute',
+    zIndex: 50,
+    top: 20,
+    left: 10,
+    backgroundColor: '#e6e6e6',
+    padding: 10,
+    borderRadius: 50,
+    shadowColor: 'black',
+    shadowOffset: { width: -2, height: 4 },
+    shadowOpacity: 0.2,
+    shadowRadius: 3,
+}
+
 export const inputContainer = {
     width: '90%',
 
@@ -166,4 +180,59 @@ export const suggestionsBox = {
     shadowRadius: 2,
     elevation: 2
 
+}
+
+export const suggestionsBoxBig = {
+    backgroundColor: "#e6e6e6",
+    paddingVertical: 10,
+    paddingHorizontal: 60,
+    margin: 5,
+    borderRadius: 10,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 0 },
+    shadowOpacity: 0.5,
+    shadowRadius: 2,
+    elevation: 2
+
+}
+
+export const suggestionsBoxMedium = {
+    backgroundColor: "#e6e6e6",
+    paddingVertical: 10,
+    paddingHorizontal: 30,
+    margin: 5,
+    borderRadius: 10,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 0 },
+    shadowOpacity: 0.5,
+    shadowRadius: 2,
+    elevation: 2
+
+}
+
+export const airplaneList = {
+    marginTop: 100,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 20,
+    borderBottomColor: 'red',
+    borderBottomWidth: 2,
+    marginBottom: 5,
+
+
+}
+
+export const airplaneList2 = {
+    flexDirection: 'row',
+    flex: 2,
+
+    justifyContent: 'space-between',
+    padding: 20
+
+
+}
+
+
+export const airplaneText = {
+    marginBottom: 10,
 }

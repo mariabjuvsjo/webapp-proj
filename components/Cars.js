@@ -33,7 +33,7 @@ const listItem = [
 
 ];
 
-const RATE = 1.5;
+const RATE = 0.5;
 
 const Cars = () => {
     const [marked, setMarked] = useState(null);

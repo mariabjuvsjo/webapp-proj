@@ -10,7 +10,7 @@ import Activity from './Activity';
 import HomeScreen from './HomeScreen';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-const Home = () => {
+const Landing = () => {
 
     const Tab = createBottomTabNavigator()
 
@@ -56,4 +56,4 @@ const Home = () => {
 
 
 
-export default Home
+export default Landing
